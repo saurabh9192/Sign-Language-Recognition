@@ -8,12 +8,12 @@ from PIL import Image
 
 # Initialize the HandDetector and Classifier
 detector = HandDetector(maxHands=1)
-classifier = Classifier("Model/keras_model.h5", "Model/labels.txt")
+classifier = Classifier("keras_model.h5", "labels.txt")
 
 # Constants for image processing
 offset = 20
 imgSize = 300
-labels = ["A", "B", "C"]
+labels = ["A", "B", "C", "D"]
 
 def process_frame(img):
     hands, img = detector.findHands(img)
